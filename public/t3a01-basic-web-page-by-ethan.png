@@ -47,4 +47,6 @@ allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
   You do: 2: variables, 3:loops, 5:fuctions, 6:events, 7:arrays, 8:objects, 9:classes<br>
   |
   
-  <div id
+  <div id="myDiv01>...</div>
+  <body>
+  </html>
