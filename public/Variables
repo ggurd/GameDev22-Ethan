@@ -1,0 +1,32 @@
+<h2 align-centertla06-varaibles-by-Fred.html‹/h2»
+‹a href-""›You Fix: Good reference to Variables in Javascript
+and other languages</a›‹br>
+Other Languages use: bool, int, float, char, string,
+int _8, int 16 ete‹br>
+Note: Javascript does use var and let for local variables.<br>
+For Global variables Mr. Ellis prefers to use document.myVarName
+<h4> Example input output code</h4>
+{pre>
+let myIn01
+= document. getElementById('myTextol').value
+document. getElementbyId('myDivOl').innerHTML
+myIn01
+</pre»
+<h4> Example working code</h4>
+«input id-"myTexto1"
+type=text value="The dog
+sebr>
+*input type-button value-"Show Variable"
+onclick="f
+let myIn01
+- document-getElementById('myTextol'),value
+document. getElementById('myDiv0l'). innerHTML
+= mVIn01
+f'axbra
+<input type=button value-"Using no variable"
+onclick-"f
+document .getElementById('myDivol"),innerHTML
+document.getElementById('myText01') . value 
+}"><br>
+
+<div id="myDiv01">...</div>
