@@ -1,0 +1,86 @@
+<html>
+<head>
+<titl> Basic web stuff</title>
+<style>
+body {
+  background-image: url(https://my4kwallpapers.com/wp-content/uploads/2021/03/The-Flash-4k-Wallpaper.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+</style>
+</head>
+<body text="red">
+<h5>Version 0.2.3</h5>
+
+<h1 align=center>T3A01-Web-Basics-by-Evan.html </h1>
+<p><font color="purple">
+<a href="http://www.google.ca">Link to Google</a><br>
+  </font>
+  </font>
+  </p>
+  <p><font color="yellow">
+ Plain Text <b> Bold </b> and <i> Italic, </i> can you put them together? <i> <b> Yes of course :) </b> </i><br>
+    </font>
+  </font>
+  </p>
+<hr>
+This is an image of the Falsh running with Reverse Flash <br>
+<img width=300
+src="https://wallpaper.dog/large/17178823.jpg"><br><br>
+  
+Youtube Embedded video of Barry and Wally racing!! <br>
+<iframe width="300" height="200" src="https://www.youtube.com/embed/I2_P_-ZosfU" frameborder="0"
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen></iframe>
+<hr>
+<p><font color="yellow">
+<div>This is a </div>
+<div>div</div>
+<span>This is </span>
+<span> a span</span>
+  </font>
+</font>
+</p>
+<h3> Write about Ellis' 10 main areas of coding</h3>
+
+<p><font color="pink">
+<input type=button value="0. Pseudo Code" onclick="{
+   document.getElementById('myDiv01').innerHTML = 'Hello don\'t World'
+}">
+  
+<input type=button value="1. Input/Output" onclick="{
+   document.getElementById('myDiv01').innerHTML = 'Input adffgdsfsgsdfdfg,br>'
+   +'sdfg<br>sdfg<br>output is...'
+}">
+  
+<input type=button value="4. Decisions" onclick="{
+   document.getElementById('myDiv01').innerHTML = `
+  Decisions use the if statement to make true
+  false variable decisions<br>
+<pre>
+if (hour < 18) {
+  greeting = \'Good day\';
+}
+</pre>
+            </font>
+</font>
+</p>                                        
+`}"><br>
+You do: 2:variables, 3:loops, 5:functions, 6:events, 7:arrays, 8:objects, 9:classes<br>
+ 
+<div id="myDiv01">...</div>
+<p>
+You can also do other things with buttons like incorporating them with this progress-bar!
+  </p>
+<progress id="progBar" value="0" max="100"></progress>
+<button id="btnAddValue">Add Value</button>
+
+<script>
+document.getElementById("btnAddValue").
+addEventListener('click', function() {
+document.getElementById('progBar').value += 5;
+});
+</script>
+<body>
+</html>
