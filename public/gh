@@ -1,0 +1,41 @@
+function myHitother (my1,my2) d
+lefti
+parseInt(document.getelementById(my1).style.left)
+righti
+= lefti + parseInt(document. getElementById (my1) .style.width)
+topi
+= parseInt (document.getElementById (my1) .style.top)
+bottom1 = topl
++ parseInt (document.gettlementById (my1). style.height)
+left2
+parseInt(document.getElementById(my2).style.left)
+rightz
+= left2 + parseInt(document.getElementById(my2).style.width)
+to02
+= parseInt (document. getElementyId(my2) .style. top)
+bottom2 = top2
++ parseInt (document.getElementById (my2) .style.height)
+if ((righti
+3=
+left2
+) &&
+(bottom1 >.
+top2
+)
+88
+(lefti
+right2 )
+88
+(top1
+1=
+bottom2) )f
+return true
+]
+function myCheckHit0d
+if ( myritother ('myIngo1' ,
+. 'myImg02 1) )f
+alert( 'you lose')
+//document. getElementById('myIng@1').style.left
+-
+'20px
+// more if statements here
