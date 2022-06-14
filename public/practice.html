@@ -32,6 +32,23 @@ function myHitOther(my1,my2){
    }
 }
 
+function myHitFinishLine(my3,my4){
+   left2   = parseInt(document.getElementById(my3).style.left)
+   right2  = left2 + parseInt(document.getElementById(my3).style.width)
+   top2    = parseInt(document.getElementById(my3).style.top+10)   
+   bottom2 = top2   + parseInt(document.getElementById(my3).style.height)
+   left3   = parseInt(document.getElementById(my4).style.left)
+   right3  = left3 + parseInt(document.getElementById(my4).style.width)
+   top3    = parseInt(document.getElementById(my4).style.top+10)   
+   bottom3 = top3   + parseInt(document.getElementById(my4).style.height)
+   if ((right2  >=  left3  ) &&      	   
+       (bottom2 >=  top3   ) &&
+       (left2   <=  right3 ) &&
+       (top2    <=  bottom3) ){
+       return true
+   }
+}
+
 
 function myCheckHit(){
    if ( myHitOther('myImg01','myImg02') ){
@@ -42,12 +59,22 @@ function myCheckHit(){
    // more if statements here like the above
 
 }  // end of myCheckHit()
+   
+function myCheckHit2(){
+   if ( myHitFinishLine('myImg02','myImg03') ){
+       alert('Finish Line')  
+       document.getElementById('myImg02').style.left = '50px'
+     //  location = 't2a8-canvas-name.html'  // go to your next level
+   }
+   // more if statements here like the above
 
+}  // end of myCheckHit()
 
 </script>
 
 <img id="myImg01" style="position:absolute; width:120px; height:80px; top:800px; left:50px;"  src="car1.jpg">
 <img id="myImg02" style="position:absolute; width:120px; height:80px; top:800px; left:500px;" src="car2.jpg">
+<img id="myImg03" style="position:absolute; width:120px; height:80px; top:800px; left:1000px;" src="finsihline2.jpg">
 
 <input type=button value="Auto Background Left" onclick="{
   clearInterval(myClock)
