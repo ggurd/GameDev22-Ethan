@@ -65,11 +65,11 @@ function myCheckHit(){
 }">
 
 
-<input type=button value="Move Car" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+<input type=button value="Move Red Car" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
   myCheckHit()     // checks for all collisions
 }">
-<input type=button value="Start" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+<input type=button value="Start Blue Car" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   clearInterval(myClock)
   let myTemp = '100px 0px'
   myClock = setInterval(function(){
