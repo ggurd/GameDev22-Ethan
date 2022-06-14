@@ -1,8 +1,8 @@
-<h6> Version 0.0.1 </h6>
+<h6> Version 0.0.2 </h6>
 
 <body id="myBody" style="background-repeat:repeat; background-size: 80%" background="cat.jpg">
 
-<h1 align=center>t2a11 Game Template by Fred 12</h1>
+<h1 align=center>Ethan Ikeda Program</h1>
 <br><br><br><br>
 
 <script>
@@ -51,11 +51,11 @@ function myCheckHit(){
 <img id="myImg01" style="position:absolute; width:100px; height:80px; top:0px; left:50px;"  src="myImage01.jpg">
 <img id="myImg02" style="position:absolute; width:100px; height:80px; top:0px; left:250px;" src="myImage02.jpg">
 
-<input type=button value="Auto Background Left" onclick="{
+<input type=button value="Move Background Left" onclick="{
   clearInterval(myClock)
   let myTemp = '100px 0px'
   myClock = setInterval(function(){
-      myGlobalX -= 20
+      myGlobalX -= 200
       myTemp =  myGlobalX + 'px 0px'
       document.getElementById('myBody').style.backgroundPosition = myTemp
   }, 100)
