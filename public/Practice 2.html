@@ -2,7 +2,7 @@
 
 <body id="myBody" style="background-repeat:repeat; background-size: 80%" background="myBackground01.jpg">
 
-<h1 align=center><font color=red>T4A04 Maze by Fred 1.2.2</font></h1>
+<h1 align=center><font color=red>T4A04 Maze by Fred 1.2.3</font></h1>
 
 
 <script>
@@ -47,9 +47,10 @@ function myCheckHit(){
          alert('right hit')
       document.getElementById('myImg01').style.left = left1-10
       }
-     // if top1 <= bottom2 {
-   //   document.getElementById('myImg01').style.top = top1+10}
-   }   
+      if (top1 <= bottom2) {
+         alert('top hit')
+      document.getElementById('myImg01').style.top = top1+10}
+      }   
    
    if ( myHitOther('myImg01','myImg03') ){
        alert('You Hit a Wall!')
