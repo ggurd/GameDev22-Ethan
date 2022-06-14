@@ -60,14 +60,12 @@ function myCheckHit(){
       myGlobalX -= 5
       myTemp =  myGlobalX + 'px 0px'
       document.getElementById('myBody').style.backgroundPosition = myTemp
-  }, 100)
-                                                         
-onclick="{
+ 
   clearInterval(myCarClock)
   let myTemp2 = '100px 0px'
   myCarClock = setInterval(function(){
       myCarX -= 5
-      myTemp2 =  myCarX - 'px 0px'
+      myTemp2 =  myCarX + 'px 0px'
       document.getElementById('myImg02').style.backgroundPosition = myTemp2
   }, 100)
     
