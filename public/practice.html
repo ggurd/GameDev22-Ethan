@@ -33,7 +33,7 @@ function myHitOther(my1,my2){
 
 function myCheckHit(){
    if ( myHitOther('myImg01','myImg02') ){
-       alert('you lose')  
+       alert('You hit each other')  
        document.getElementById('myImg01').style.left = '20px'
        location = 't2a13-keydown.html'  // go to your next level
    }
@@ -63,7 +63,7 @@ function myCheckHit(){
 }">
 
 
-<input type=button value="Image Right Fast Button" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+<input type=button value="Image Right Fast Button 21" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
   myCheckHit()     // checks for all collisions
 }"><br><br>
