@@ -84,13 +84,13 @@ function myCheckHit2(){
       myTemp =  myGlobalX + 'px 0px'
       document.getElementById('myBody').style.backgroundPosition = myTemp
   }, 100)
-  clearInterval(myCarClock)
-  let myTemp2 = '100px 0px'
-  myCarClock = setInterval(function(){
-      myCarX -= 5
-      myTemp2 =  myCarX + 'px 0px'
-      document.getElementById('myImg02').style.Position = myTemp2
-  }, 100)
+//  clearInterval(myCarClock)
+//  let myTemp2 = '100px 0px'
+//  myCarClock = setInterval(function(){
+ //     myCarX -= 5
+ //     myTemp2 =  myCarX + 'px 0px'
+//      document.getElementById('myImg02').style.Position = myTemp2
+//  }, 100)
     myCheckhit2()
 }">
 
@@ -99,5 +99,8 @@ function myCheckHit2(){
   document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
   myCheckHit()     // checks for all collisions
 }">
-  
+<input type=button value="Move Blue Car" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+  document.getElementById('myImg02').style.left = parseInt(document.getElementById('myImg02').style.left) + 10 + 'px'
+  myCheckHit2()     // checks for all collisions
+}">  
    <br><br>
