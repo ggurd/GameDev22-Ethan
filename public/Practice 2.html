@@ -2,7 +2,7 @@
 
 <body id="myBody" style="background-repeat:repeat; background-size: 80%" background="myBackground01.jpg">
 
-<h1 align=center><font color=red>T4A04 Maze by Fred 1.0.2</font></h1>
+<h1 align=center><font color=red>T4A04 Maze by Fred 1.0.3</font></h1>
 
 
 <script>
@@ -39,8 +39,8 @@ function myCheckHit(){
    }   
    
    if ( myHitOther('myImg01','myImg03') ){
-       alert('you lose')
-      document.getElementById('myImg01').style.left = '5px'
+       alert('You Hit a Wall!')
+      document.getElementById('myImg01').style.left = '50px'
    }   
    
 
@@ -61,7 +61,7 @@ function myCheckHit(){
 </script>
 
 
-
+alert('Start')
 
 <input type=button value="Auto Background Left" onclick="{
   clearInterval(myClock)
