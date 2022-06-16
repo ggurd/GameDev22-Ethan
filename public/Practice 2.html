@@ -2,7 +2,7 @@
 
 <body id="myBody" style="background-repeat:repeat; background-size: 80%" background="road4.jpg">
 
-<h1 align=center><font color=red>T4A04 Maze by Fred 1.5.0</font></h1>
+<h1 align=center><font color=red>T4A04 Maze by Fred 1.5.1</font></h1>
 
 
 <script>
@@ -35,7 +35,10 @@ function myHitOther(my1,my2){
    if ((left1  <=  right2  ) &&      	   
        (bottom1 >=  top2   ) &&
        (right1   >=  right2 ) &&
-       (top1    <=  bottom2) ){   
+       (top1    <=  bottom2) ){ 
+      alert('L')
+      alert(right1)
+      alert(right2)
        a = 'L'
        return true
    }
@@ -71,7 +74,7 @@ function myCheckHit(){
     // alert(left1)
       //alert(a)
       if (a = 'L') {
-         alert(a)
+       //  alert(a)
          alert('inside L')
          document.getElementById('myImg01').style.right = right1+10
          alert(right1+10)
