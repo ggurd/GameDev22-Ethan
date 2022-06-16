@@ -2,7 +2,7 @@
 
 <body id="myBody" style="background-repeat:repeat; background-size: 80%" background="road4.jpg">
 
-<h1 align=center><font color=red>T4A04 Maze by Fred 1.4.9</font></h1>
+<h1 align=center><font color=red>T4A04 Maze by Fred 1.5.0</font></h1>
 
 
 <script>
@@ -12,13 +12,14 @@
    let myClock
    
   // var a
-alert('Start')
+   alert('Move the car through the maze and get to the Finish Line!!   Start!!')
    clearInterval(myClock)
-  let myTemp = '100px 0px'
-  myClock = setInterval(function(){
-      myGlobalX -= 5
-      myTemp =  myGlobalX + 'px 0px'
-      document.getElementById('myBody').style.backgroundPosition = myTemp
+   let myTemp = '100px 0px'
+   myClock = setInterval(function(){
+     
+   myGlobalX -= 5    
+   myTemp =  myGlobalX + 'px 0px'
+   document.getElementById('myBody').style.backgroundPosition = myTemp
   }, 100)
    
    // global functions here
@@ -34,40 +35,32 @@ function myHitOther(my1,my2){
    if ((left1  <=  right2  ) &&      	   
        (bottom1 >=  top2   ) &&
        (right1   >=  right2 ) &&
-       (top1    <=  bottom2) ){ 
-       
+       (top1    <=  bottom2) ){   
        a = 'L'
-      
        return true
    }
    else if ((right1  >=  right2  ) &&      	   
        (bottom1 >=  top2   ) &&
        (left1   <=  right2 ) &&
        (top1    <=  bottom2) ){ 
-       
        a = 'T'
-      
        return true
    }
    else if ((right1  >=  right2  ) &&      	   
        (bottom1 >=  top2   ) &&
        (left1   <=  right2 ) &&
        (top1    <=  bottom2) ){ 
-       
        a = 'B'
-      
        return true
    }
    else if ((right1  >=  left2  ) &&      	   
        (bottom1 >=  top2   ) &&
        (left1   <=  right2 ) &&
        (top1    <=  bottom2) ){ 
-       
        a = 'R'
       alert ('going to checkhit for right')
        return true
-   }
-   
+   }  
 }
 
 
@@ -82,7 +75,7 @@ function myCheckHit(){
          alert('inside L')
          document.getElementById('myImg01').style.right = right1+10
          alert(right1+10)
-                  
+                  }    
       else if (a = 'T') {
          alert('inside T')
          document.getElementById('myImg01').style.top = top1+10
@@ -95,8 +88,8 @@ function myCheckHit(){
          alert('inside R')
          document.getElementById('myImg01').style.left = left1-10
                   }
-      }
-      }
+         
+    }
         
    
    if ( myHitOther('myImg01','myImg03') ){
