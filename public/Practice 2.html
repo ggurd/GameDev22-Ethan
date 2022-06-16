@@ -2,7 +2,7 @@
 
 <body id="myBody" style="background-repeat:repeat; background-size: 80%" background="road4.jpg">
 
-<h1 align=center><font color=red>T4A04 Maze by Fred 1.6.7</font></h1>
+<h1 align=center><font color=red>T4A04 Maze by Fred 1.6.8</font></h1>
 
 
 <script>
@@ -11,7 +11,11 @@
    let myGlobalX = 0
    let myClock
    
-  a ='x'
+   a ='x'
+   leftp = 0
+   rightp = 0
+   topp = 0
+   bottomp = 0
    alert('Move the car through the maze and get to the Finish Line!!   Start!!')
    clearInterval(myClock)
    let myTemp = '100px 0px'
@@ -140,7 +144,9 @@ function myCheckHit(){
 }">
 
 <input type=button value="Left" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+  leftp = document.getElementById('myImg01').style.left
   document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + -10 + 'px'
+  alert(leftp)
   myCheckHit()     // checks for all collisions
 }">
    
