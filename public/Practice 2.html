@@ -2,7 +2,7 @@
 
 <body id="myBody" style="background-repeat:repeat; background-size: 80%" background="road4.jpg">
 
-<h1 align=center><font color=red>T4A04 Maze by Fred 1.7.5</font></h1>
+<h1 align=center><font color=red>T4A04 Maze by Fred 1.7.6</font></h1>
 
 
 <script>
@@ -76,7 +76,7 @@ function myHitOther(my1,my2){
 
 function myCheckHit(){
 
-   if ( myHitOther('myImg01','myImg02') ){
+   if ( myHitOther('myImg01','myWall01') ){
       document.getElementById('myImg01').style.left = leftp
       document.getElementById('myImg01').style.right = rightp
       document.getElementById('myImg01').style.top = topp
@@ -159,6 +159,6 @@ function myCheckHit(){
 
 
 <img id="myImg01" src="car1.jpg"  style="position:absolute; width:100px; height:80px; left: 50px; top:190px;">
-<img id="myImg02" src="myImgNew.jpg"  style="position:absolute; width:10px; height:200px; left:350px; top:90px;">
+<img id="myWall01" src="myImgNew.jpg"  style="position:absolute; width:1000px; height:10px; left:350px; top:90px;">
 <img id="myImg03" src="myImgNew.jpg"  style="position:absolute; width:200px; height:10px; left:500px; top:400px;">
 <img id="myImg04" src="finishline2.jpg"  style="position:absolute; width:100px; height:80px; left:800px; top:400px;">
