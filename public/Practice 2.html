@@ -11,20 +11,20 @@
    let myGlobalX = 0
    let myClock
    
-   a ='x'
    leftp = 0
    rightp = 0
    topp = 0
    bottomp = 0
+   
    alert('Move the car through the maze and get to the Finish Line!!   Start!!')
+   
    clearInterval(myClock)
    let myTemp = '100px 0px'
-   myClock = setInterval(function(){
-     
-   myGlobalX -= 5    
-   myTemp =  myGlobalX + 'px 0px'
-   document.getElementById('myBody').style.backgroundPosition = myTemp
-  }, 100)
+   myClock = setInterval(function(){ 
+      myGlobalX -= 5    
+      myTemp =  myGlobalX + 'px 0px'
+      document.getElementById('myBody').style.backgroundPosition = myTemp
+      }, 100)
    
    // global functions here
 function myHitOther(my1,my2){
@@ -41,58 +41,47 @@ function myHitOther(my1,my2){
        (bottom1 >=  top2   ) &&
        (right1   >=  right2 ) &&
        (top1    <=  bottom2) ){ 
-       a = 'L'
-      alert ('going to checkhit for left')
        return true
    }
    else if ((right1  >=  right2  ) &&      	   
        (bottom1 >=  top2   ) &&
        (left1   <=  right2 ) &&
        (top1    <=  bottom2) ){ 
-       a = 'T'
-      alert ('going to checkhit for top')
        return true
    }
    else if ((right1  >=  right2  ) &&      	   
        (bottom1 >=  top2   ) &&
        (left1   <=  right2 ) &&
        (top1    <=  bottom2) ){ 
-       a = 'B'
-      alert ('going to checkhit for bottom')
        return true
    }
    else if ((right1  >=  left2  ) &&      	   
        (bottom1 >=  top2   ) &&
        (left1   <=  right2 ) &&
        (top1    <=  bottom2) ){ 
-      alert(a)
-       a = 'R'
-      alert ('going to checkhit for right')
-      
        return true
    }  
 }
 
-
 function myCheckHit(){
 
    if ( myHitOther('myImg01','myWall01') ){
+      alert('You Hit a Wall!')
       document.getElementById('myImg01').style.left = leftp
       document.getElementById('myImg01').style.right = rightp
       document.getElementById('myImg01').style.top = topp
-      document.getElementById('myImg01').style.bottom = bottomp
-         
+      document.getElementById('myImg01').style.bottom = bottomp   
     }
 
    if ( myHitOther('myImg01','myWall02') ){
-       alert('You Hit a Wall!')
+      alert('You Hit a Wall!')
       document.getElementById('myImg01').style.left = leftp
       document.getElementById('myImg01').style.right = rightp
       document.getElementById('myImg01').style.top = topp
       document.getElementById('myImg01').style.bottom = bottomp
    }   
    if ( myHitOther('myImg01','myWall03') ){
-       alert('You Hit a Wall!')
+      alert('You Hit a Wall!')
       document.getElementById('myImg01').style.left = leftp
       document.getElementById('myImg01').style.right = rightp
       document.getElementById('myImg01').style.top = topp
@@ -130,41 +119,32 @@ function myCheckHit(){
 }">
 
 <input type=button value="Left" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
-    myPosition()                                                                                             
+  myPosition()                                                                                             
   document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + -10 + 'px'
- 
   myCheckHit()     // checks for all collisions
 }">
    
 <input type=button value="Right" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
-                                                                                                 myPosition()
+  myPosition()
   document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
-  
   myCheckHit()     // checks for all collisions
 }">
 
 <input type=button value="Up" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
-                                                                                               myPosition()
+  myPosition()
   document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + -10 + 'px'
- 
   myCheckHit()     // checks for all collisions
 }">  
    
 <input type=button value="Down" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
-                                                                                                myPosition()
+  myPosition()
   document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 + 'px'
-  
   myCheckHit()     // checks for all collisions
 }">
-   
- 
 <br><br>
-
-
-
 
 <img id="myImg01" src="car1.jpg"  style="position:absolute; width:100px; height:80px; left: 50px; top:300px;">
 <img id="myWall01" src="myImgNew.jpg"  style="position:absolute; width:1300px; height:10px; left:50px; top:210px;">
 <img id="myWall02" src="myImgNew.jpg"  style="position:absolute; width:1300px; height:10px; left:50px; top:800px;">
-<img id="myWall03" src="myImgNew.jpg"  style="position:absolute; width:200px; height:10px; left:500px; top:400px;">
-<img id="myFinish" src="finishline2.jpg"  style="position:absolute; width:100px; height:80px; left:1000px; top:400px;">
+<img id="myWall03" src="myImgNew.jpg"  style="position:absolute; width:10px; height:200px; left:100px; top:240px;">
+<img id="myFinish" src="finishline2.jpg"  style="position:absolute; width:100px; height:80px; left:1300px; top:500px;">
