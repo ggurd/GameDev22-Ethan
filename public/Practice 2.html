@@ -110,7 +110,7 @@ function myCheckHit(){
 
 </script>
 
-<input type=button value="Left" style="position:absolute; left: 500px; top:850px;"onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+<input type=button value="Left" style="position:absolute; left: 500px; top:50px;"onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   myPosition()                                                                                             
   document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + -10 + 'px'
   myCheckHit()     // checks for all collisions
