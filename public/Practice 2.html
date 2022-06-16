@@ -2,7 +2,7 @@
 
 <body id="myBody" style="background-repeat:repeat; background-size: 80%" background="road4.jpg">
 
-<h1 align=center><font color=red>T4A04 Maze by Fred 1.7.8</font></h1>
+<h1 align=center><font color=red>T4A04 Maze by Fred 1.7.9</font></h1>
 
 
 <script>
@@ -83,8 +83,7 @@ function myCheckHit(){
       document.getElementById('myImg01').style.bottom = bottomp
          
     }
-        
-   
+
    if ( myHitOther('myImg01','myWall02') ){
        alert('You Hit a Wall!')
       document.getElementById('myImg01').style.left = leftp
@@ -92,15 +91,21 @@ function myCheckHit(){
       document.getElementById('myImg01').style.top = topp
       document.getElementById('myImg01').style.bottom = bottomp
    }   
-   
+   if ( myHitOther('myImg01','myWall03') ){
+       alert('You Hit a Wall!')
+      document.getElementById('myImg01').style.left = leftp
+      document.getElementById('myImg01').style.right = rightp
+      document.getElementById('myImg01').style.top = topp
+      document.getElementById('myImg01').style.bottom = bottomp
+   }  
 
 
-   // YOU WIN and go to next level!
+   // YOU WIN!
 
-   if ( myHitOther('myImg01','myImg04') ){
-       alert('You Win, now go to the next level')
+   if ( myHitOther('myImg01','myFinish') ){
+       alert('You Win')
       document.getElementById('myImg01').style.left = '20px'
-      location = 'https://www.google.ca'
+     // location = 'https://www.google.ca'
    }
 
    // more if statements here
@@ -159,7 +164,7 @@ function myCheckHit(){
 
 
 <img id="myImg01" src="car1.jpg"  style="position:absolute; width:100px; height:80px; left: 50px; top:300px;">
-<img id="myWall01" src="myImgNew.jpg"  style="position:absolute; width:1000px; height:10px; left:350px; top:200px;">
-<img id="myWall02" src="myImgNew.jpg"  style="position:absolute; width:1000px; height:10px; left:350px; top:800px;">
+<img id="myWall01" src="myImgNew.jpg"  style="position:absolute; width:1300px; height:10px; left:50px; top:210px;">
+<img id="myWall02" src="myImgNew.jpg"  style="position:absolute; width:1300px; height:10px; left:50px; top:800px;">
 <img id="myWall03" src="myImgNew.jpg"  style="position:absolute; width:200px; height:10px; left:500px; top:400px;">
-<img id="myImg04" src="finishline2.jpg"  style="position:absolute; width:100px; height:80px; left:800px; top:400px;">
+<img id="myFinish" src="finishline2.jpg"  style="position:absolute; width:100px; height:80px; left:800px; top:400px;">
