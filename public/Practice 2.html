@@ -71,7 +71,7 @@ function myHitOther(my1,my2){
 }
 
 
-function myCheckHit(a){
+function myCheckHit(){
 
    if ( myHitOther('myImg01','myImg02') ){
        //alert('you lose')
@@ -83,7 +83,7 @@ function myCheckHit(a){
          document.getElementById('myImg01').style.right = right1+10
        //  alert(right1+10)
                   }    
-      else if (a = 'T') {
+      if (a = 'T') {
          alert('inside T')
          document.getElementById('myImg01').style.top = top1+10
                   }
@@ -91,7 +91,7 @@ function myCheckHit(a){
          alert('inside B')
          document.getElementById('myImg01').style.bottom = bottom1+10
                   }
-      else if (a = 'R') {
+      if (a = 'R') {
          alert('inside R')
          document.getElementById('myImg01').style.left = left1-10
                   }
