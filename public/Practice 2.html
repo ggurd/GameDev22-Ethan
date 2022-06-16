@@ -2,7 +2,7 @@
 
 <body id="myBody" style="background-repeat:repeat; background-size: 80%" background="road4.jpg">
 
-<h1 align=center><font color=red>T4A04 Maze by Fred 1.5.2</font></h1>
+<h1 align=center><font color=red>T4A04 Maze by Fred 1.5.3</font></h1>
 
 
 <script>
@@ -32,6 +32,7 @@ function myHitOther(my1,my2){
    right2  = left2 + parseInt(document.getElementById(my2).style.width)
    top2    = parseInt(document.getElementById(my2).style.top)   
    bottom2 = top2   + parseInt(document.getElementById(my2).style.height)
+   alert(a)
    if ((left1  <=  right2  ) &&      	   
        (bottom1 >=  top2   ) &&
        (right1   >=  right2 ) &&
@@ -73,12 +74,12 @@ function myCheckHit(){
        //alert('you lose')
     // alert(left1)
       alert(a)
-      if (a = 'L') {
+    //  if (a = 'L') {
        //  alert(a)
         // alert('inside L')
-         document.getElementById('myImg01').style.right = right1+10
+     //    document.getElementById('myImg01').style.right = right1+10
        //  alert(right1+10)
-                  }    
+      //            }    
       else if (a = 'T') {
          alert('inside T')
          document.getElementById('myImg01').style.top = top1+10
