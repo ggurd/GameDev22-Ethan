@@ -226,25 +226,25 @@ function myCheckHit(){
 
 </script>
 
-<input type=button value="Left" style="position:absolute; left: 900px; top:100px;" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+<input type=button value="Left" style="position:absolute; left: 900px; top:110px;" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   myPosition()                                                                                             
   document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + -10 + 'px'
   myCheckHit()     // checks for all collisions
 }">
    
-<input type=button value="Right" style="position:absolute; left: 990px; top:100px;" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+<input type=button value="Right" style="position:absolute; left: 990px; top:110px;" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   myPosition()
   document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
   myCheckHit()     // checks for all collisions
 }">
 
-<input type=button value="Up" style="position:absolute; left: 950px; top:80px;" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+<input type=button value="Up" style="position:absolute; left: 950px; top:90px;" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   myPosition()
   document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + -10 + 'px'
   myCheckHit()     // checks for all collisions
 }">  
    
-<input type=button value="Down" style="position:absolute; left: 940px; top:120px;" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+<input type=button value="Down" style="position:absolute; left: 940px; top:130px;" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   myPosition()
   document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 + 'px'
   myCheckHit()     // checks for all collisions
