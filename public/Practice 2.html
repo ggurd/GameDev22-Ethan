@@ -15,6 +15,10 @@
    rightp = 0
    topp = 0
    bottomp = 0
+   OriginalCarPositionlLeft = 0
+   OriginalCarPositionlRight = 0
+   OriginalCarPositionlTop = 0
+   OriginalCarPositionlBottom = 0
    
    alert('Move the car through the maze and get to the Finish Line!!   Start!!')
    
@@ -110,12 +114,27 @@ function myCheckHit(){
        alert('You Made it to the Finish Line.  Congratulations!!')
       document.getElementById('myImg01').style.left = leftp
      // location = 'https://www.google.ca'
+      myCarRest()
    }
 
    // more if statements here
 
 }
-
+   
+   function myCarOriginalPosition(){
+      OriginalCarPositionlLeft = document.getElementById('myImg01').style.left
+      OriginalCarPositionlRight = document.getElementById('myImg01').style.right
+      OriginalCarPositionlTop = document.getElementById('myImg01').style.top
+      OriginalCarPositionlBottom = document.getElementById('myImg01').style.bottom
+   }
+   
+   function myCarReset(){
+      document.getElementById('myImg01').style.left = OriginalCarPositionlLeft
+      document.getElementById('myImg01').style.right = OriginalCarPositionlRight
+      document.getElementById('myImg01').style.top = OriginalCarPositionlTop
+      document.getElementById('myImg01').style.bottom = OriginalCarPositionlBottom
+   }
+    
    function myPosition(){
       leftp = parseInt(document.getElementById('myImg01').style.left)  
       rightp  = leftp + parseInt(document.getElementById('myImg01').style.width)
@@ -151,6 +170,7 @@ function myCheckHit(){
 <br><br>
 
 <img id="myImg01" src="car1.jpg"  style="position:absolute; width:100px; height:80px; left: 250px; top:440px;">
+ myCarOriginalPosition()
 <img id="myWall01" src="myImgNew.jpg"  style="position:absolute; width:1300px; height:10px; left:300px; top:210px;">
 <img id="myWall02" src="myImgNew.jpg"  style="position:absolute; width:1300px; height:10px; left:300px; top:800px;">
 <img id="myWall03" src="myImgNew.jpg"  style="position:absolute; width:10px; height:550px; left:220px; top:220px;">
@@ -164,3 +184,4 @@ function myCheckHit(){
 <img id="myWall11" src="myImgNew.jpg"  style="position:absolute; width:10px; height:100px; left:700px; top:400px;">
 <img id="myWall12" src="myImgNew.jpg"  style="position:absolute; width:10px; height:100px; left:700px; top:200px;">
 <img id="myFinish" src="finishline2.jpg"  style="position:absolute; width:100px; height:100px; left:1500px; top:450px;">
+
