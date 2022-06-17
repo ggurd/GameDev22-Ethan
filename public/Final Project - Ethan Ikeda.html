@@ -1,9 +1,7 @@
 <h6> Version 2.3.0 </h6>
 
-<body id="myBody" style="background-repeat:repeat; background-size: 80%" background="road4.jpg">
-
+<body id="myBody" style="background-repeat:repeat; background-size: 80%" background="road4.jpg">  //set background image
 <h1 align=center><font color=blue>Ethan Ikeda's Maze Race</font></h1>
-
 
 <script>
 
@@ -11,18 +9,18 @@
    let myGlobalX = 0
    let myClock
    
-   leftp = 0
+   leftp = 0  //set previous coordinates of the car 
    rightp = 0
    topp = 0
    bottomp = 0
-   OriginalCarPositionlLeft = 250
+   OriginalCarPositionlLeft = 250  //set original coordinates for car
    OriginalCarPositionlRight = 350
    OriginalCarPositionlTop = 440
    OriginalCarPositionlBottom = 520
    
    alert('Move the car through the maze and get to the Finish Line!!   Start!!')
    
-   clearInterval(myClock)
+   clearInterval(myClock)  //background movement
    let myTemp = '100px 0px'
    myClock = setInterval(function(){ 
       myGlobalX -= 5    
@@ -31,7 +29,7 @@
       }, 100)
    
    // global functions here
-function myHitOther(my1,my2){
+function myHitOther(my1,my2){  //checks to see if edge of car crosses the edge of an object
    left1   = parseInt(document.getElementById(my1).style.left)
    right1  = left1 + parseInt(document.getElementById(my1).style.width)
    top1    = parseInt(document.getElementById(my1).style.top)   
@@ -68,15 +66,13 @@ function myHitOther(my1,my2){
 }
 
 function myCheckHit(){
-
-   if ( myHitOther('myImg01','myWall01') ){
+   if ( myHitOther('myImg01','myWall01') ){  //if wall is hit sets car position back to previous position
       alert('You Hit a Wall!')
       document.getElementById('myImg01').style.left = leftp
       document.getElementById('myImg01').style.right = rightp
       document.getElementById('myImg01').style.top = topp
       document.getElementById('myImg01').style.bottom = bottomp   
     }
-
    if ( myHitOther('myImg01','myWall02') ){
       alert('You Hit a Wall!')
       document.getElementById('myImg01').style.left = leftp
@@ -212,19 +208,16 @@ function myCheckHit(){
      // location = 'https://www.google.ca'
       myCarReset()
    }
-
-   // more if statements here
-
 }
      
-   function myCarReset(){
+   function myCarReset(){  //once car hits Finish line sets car coordinates to start line
       document.getElementById('myImg01').style.left = OriginalCarPositionlLeft
       document.getElementById('myImg01').style.right = OriginalCarPositionlRight
       document.getElementById('myImg01').style.top = OriginalCarPositionlTop
       document.getElementById('myImg01').style.bottom = OriginalCarPositionlBottom
    }
     
-   function myPosition(){
+   function myPosition(){  //gets car position before it moves and holds it
       leftp = parseInt(document.getElementById('myImg01').style.left)  
       rightp  = leftp + parseInt(document.getElementById('myImg01').style.width)
       topp    = parseInt(document.getElementById('myImg01').style.top)   
