@@ -1,4 +1,4 @@
-Version 8.3.1
+Version 8.3.2
 <h2 align-center>t3a05-input-output-ethan.html</h2>
 
 <a href="https://www.w3schools.com/jsref/prop_html_innerhtml.asp">
@@ -15,13 +15,11 @@ Good reference to input output Javascript innerHTML value by Fred</a><br>
 
 <h4> Example working code</h4›
 
-<input id="myNum01" type=number value=4><br>
+<input id="myNum01" type=number value="4.0"><br>
   
 <input type=button value="myEvent squares" onclick="{
     let myIn01 = parseFloat(document.getElementById('myNum01').value)
-                                                    alert(myIn01)
-                                                    alert('hi')
-                                                    alert(myNum01)
+                                                 
     let myAnswer = myIn01*myIn01
     document.getElementById('myDiv0l').innerHTML = myIn01 + ' squared = ' + myAnswer
 }"><br>
