@@ -1,31 +1,34 @@
-Version 0.0.1.1
+Version 0.0.2
 <h2 align=center>t3a06-variables-by-Ethan.html</h2>
 
 <a href="">You find one or more good reference link to Variables in Javascript 
 and other languages</a><br><br>
 
-Other Languages use:bool, int, float, char string, 
-int_8, int_16 ... etc<br>
+Other Languages use: bool, int, float, char, string, 
+int_8, int_16 etc<br>
 
 Note: Javascript does use var and left for local variables.<br>
-For Global variables Mr. Ellis prefers to use document.myVarname
+For Global variables Mr. Ellis prefers to use document.myVarName
 
 <h4> Example Variable code</h4>
 <pre>
     let myIn01 = document.getElementById('myText01').value
-    document.getElementById('mydiv01').innerHTML = myId 
+    document.getElementById('mydiv01').innerHTML = myIn01 
 </pre> 
 
 <h4> Example workinmg code</h4>
 
-<input id="myText01" type=text value="The Dog" >
-<input id="myText02" type=text value="The Cat" > <br> 
+<input id="myText01" type=text value="The Dog " ><br>
+<input id="myText02" type=text value="The Cat " ><br> 
 
-<input type=botton value="show Varble" onclick="{
+<input type=button value="Show Variable" onclick="{
     let myIn01 = document.getElementById('myText01').value
     document.getElementById('myDiv01').innerHTML = myIn01
     
 }"><br>
 
-<input type=botton value="Using no variable" onclick="{
+<input type=button value="Using no variable" onclick="{
    document.getElementById('myDiv01').innerHTML = document.getElementById('myText02').value
+}"<br>
+
+<div id="myDiv01">..</div>
