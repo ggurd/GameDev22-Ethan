@@ -1,18 +1,16 @@
 <script>
   
   function myExampleFunction(){
-      let myIn01 = parseInt(document.getElementById('myText01').value)
-      alert("myIn01 " + myIn01)
-     let a = myIn01 + myIn01 
-     let mySum = myIn01 + ' + ' + myIn01 + ' = ' + a
-    
+     let myIn01 = parseInt(document.getElementById('myText01').value)
+     let myTotal = myIn01 + myIn01 
+     let mySum = myIn01 + ' + ' + myIn01 + ' = ' + myTotal 
     alert(mySum)
       return myReply
   }
   
 </script>
 
-Version 1.0.7
+Version 1.0.
 
 <h2 align=center>t3a09-functions-by-Ethan.html</h2>
 
@@ -34,7 +32,7 @@ Information can also be passed to functions (that's more advanced).
 <input type="text" id="myText01" value="3"><br>
 
 <input type="button" value="Function Example" onClick="{
-    document.getElementById('myDiv01').innerHTML = myExampleFunction()
+    document.getElementById('myDiv01').innerHTML = 'myText01'
    }">
 
 <div id='myDiv01'>...</div><br>
