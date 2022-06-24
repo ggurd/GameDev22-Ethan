@@ -1,4 +1,4 @@
-Version 1.0.3
+Version 1.0.4
 <h2 align-center>t2a05-review-by-ethan.html</h2>
 
 <h4> Input output. Getting the information from the text box into the div</h4>
@@ -45,3 +45,58 @@ Loop this many times <input type="number" id="myTextLoop" value="10" size="10">
 }"><br><br>
 
 <div id='myDiv125'>...</div><br>
+<hr>
+
+<h4>"if statements" make decisions.
+if (x==4){ print something }
+Note: The last complex if statement may not correctly show the && = AND
+|| = OR != NOT EQUAL</h4>
+Change the number <input type="number" id="myTextIf" value="4" size="10">     
+    
+<input id="myButton126" type="button" value="If Statements" onclick="{
+      
+   document.getElementById('myDiv126').innerHTML = '' // Clear the DIV
+                                                                    
+   myIf =   document.getElementById('myTextIf').value   // Store the number
+     
+   if (myIf == 4){                                                                
+      document.getElementById('myDiv126').innerHTML += 'That number equals 4 <br>'
+   }   
+                                                                    
+   if (myIf <= 4){                                                                
+      document.getElementById('myDiv126').innerHTML += 'That number is less than 4 <br>'
+   }  
+                                                                            
+   if (Math.abs(myIf) == 4){        // absolute value of -4 = 4                                                         
+      document.getElementById('myDiv126').innerHTML += 'That number is either positive or negative 4<br>'
+   }  
+                                                                        
+   if (myIf < 0){                                                                
+      document.getElementById('myDiv126').innerHTML += 'That number is a negative number<br>'
+   }  
+                                                                    
+   if (myIf == 4){                                                                
+      document.getElementById('myDiv126').innerHTML += 'That number is less than or equal to 4 <br>'
+   }   
+                                                                    
+   if (myIf >= 4){                                                                
+      document.getElementById('myDiv126').innerHTML += 'That number is greater than or equal to 4 <br>'
+   }   
+                                                                    
+   if (myIf != 4){                                                                
+      document.getElementById('myDiv126').innerHTML += 'That number does not equal 4 <br>'
+   }   
+                                                                    
+   if ((myIf == 4) || (myIf == 8)) {                                                                
+      document.getElementById('myDiv126').innerHTML += 'That number equals either 4 or 8 <br>'
+   }     
+                                                                       
+                                                                    
+   if ((myIf == 4) &amp;&amp; (myIf < 8)) {                                                                
+      document.getElementById('myDiv126').innerHTML += 'That number equals 4 and is less than 8 <br>'
+   }                                                                     
+                                                                   
+}"><br><br>
+
+<div id='myDiv126'>...</div><br>
+<hr>
