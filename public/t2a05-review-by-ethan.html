@@ -1,4 +1,4 @@
-Version 1.0.6
+Version 1.1.0
 <h2 align-center>t2a05-review-by-ethan.html</h2>
 
 <h4> Input output. Getting the information from the text box into the div</h4>
@@ -47,7 +47,6 @@ Loop this many times <input type="number" id="myTextLoop" value="10" size="10">
 <div id='myDiv125'>...</div><br>
 <hr>
 
-<h4>Arrays store lots of variables with an index number</h4>
 <h4>"if statements" make decisions.
 if (x==4){ print something }
 Note: The last complex if statement may not correctly show the && = AND
@@ -102,7 +101,7 @@ Change the number <input type="number" id="myTextIf" value="4" size="10">
 <div id='myDiv126'>...</div><br>
 <hr>
 
-<h4>Objects store variables with a named index. Try changing them</h4>
+<h4>Arrays store lots of variables with an index number</h4>
 Store these numbers in an array <input type="text" id="myTextArray" value="3, 7, 9" size="10">        
     
 <input id="myButton127" type="button" value="Store and show array" onclick="{
@@ -120,7 +119,7 @@ Store these numbers in an array <input type="text" id="myTextArray" value="3, 7,
 <div id='myDiv127'>...</div><br>
 <hr>
 
-
+<h4>Objects store variables with a named index. Try changing them</h4>
 Store these Items in a Javascript object <br>
     <textarea id="myTextAreaObject" rows="8" cols="70" wrap="false">{
    "firstName": "John",
@@ -136,9 +135,80 @@ Store these Items in a Javascript object <br>
     myPerson = JSON.parse(document.getElementById('myTextAreaObject').value)   
                                                                          
     document.getElementById('myDiv128').innerHTML = 'Name: ' + myPerson.firstName + ' '+ myPerson.lastName + ', Age: '  + myPerson.age  + ', EyeColor: ' + myPerson.eyeColor + '<br>'
-                                                       
-                                                              
+                                                                                                               
 }"><br><br>
 
 <div id='myDiv128'>...</div><br>
+<hr>
+
+<h4>Functions are the main way to make repeatable code</h4>
+<input id="myButton129" type="button" value="Make and use a function" onclick="{
+
+function myFun(myVar){
+  document.getElementById('myDiv129').innerHTML = 'The function made this line. ' + myVar + ' was passed to the function <br>'                                                                     
+}                                                                     
+                                                                      
+
+myFun('28')      // This activates the function                                                                
+                                                                      
+}"><br><br>
+
+<div id='myDiv129'>...</div><br>
+<hr>
+
+<h4>Classes are everything put together.
+Functions inside a class are called "methods"
+Variables inside a class are called "properties"
+If statements, for loops, arrays, objects are all allowed inside a class
+Classes can be extended, so you can add your own functionality to them</h4>
+
+<input id="myButton130" type="button" value="Make and Show the class myAnimal" onclick="{
+                                                                                 
+ class myAnimal {
+    constructor(passName, passAge) {
+       this.myName = passName;
+       this.myAge = passAge;
+    }
+
+    myShow(){
+       document.getElementById('myDiv130').innerHTML = 'Hello '+ this.myName + '. You are ' + this.myAge + ' years old<br>'
+    }
+
+ }  // end class myAnimal
+                                                             
+   
+                                                                                 
+   myDog = new myAnimal('Snickers', 5)
+   myDog.myShow()                                                       
+}"><br><br>
+
+<div id='myDiv130'>...</div><br>
+<hr>
+
+<h4>Here we extend the class myAnimal to myCat</h4>
+
+<input id="myButton131" type="button" value="Extend a class" onclick="{
+class myAnimal {
+    constructor(passName, passAge) {
+       this.myName = passName;
+       this.myAge = passAge;
+    }
+    myShow(){
+       document.getElementById('myDiv131').innerHTML = 'Hello '+ this.myName + '. You are ' + this.myAge + ' years old<br>'
+    }
+ }  // end class myAnimal
+                                                             
+class myCat extends myAnimal {                                                                      
+     myShow(){
+       document.getElementById('myDiv131').innerHTML = this.myName + ' is a great cat who is ' + this.myAge + ' years old<br>'
+    }                                                                   
+}    // end extended class myCat
+                                                                     
+                                                              
+                                                                                                                                                                                                       
+   myPet = new myCat('Fluffy', 14)
+   myPet.myShow()                                                                           
+}"><br><br>
+
+<div id='myDiv131'>...</div><br>
 <hr>
