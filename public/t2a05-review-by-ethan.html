@@ -1,4 +1,4 @@
-Version 1.0.2
+Version 1.0.3
 <h2 align-center>t2a05-review-by-ethan.html</h2>
 
 <h4> Input output. Getting the information from the text box into the div</h4>
@@ -28,3 +28,20 @@ Version 1.0.2
 }"><br><br>
 
 <div id='myDiv124'>...</div><br>
+<hr>
+<h4>For loops, making computers do things over and over and over and over and over and over and again</h4>
+Loop this many times <input type="number" id="myTextLoop" value="10" size="10"> 
+    
+<input id="myButton125" type="button" value="For Loop" onclick="{
+                                                               
+    document.getElementById('myDiv125').innerHTML = ''   // blank out the DIV  
+                                                               
+    for (myLoop = 0;  myLoop <= document.getElementById('myTextLoop').value;    myLoop++){   
+                                                               
+       document.getElementById('myDiv125').innerHTML += 'Loop #'+ myLoop+'<br>'  
+                                                               
+    }
+                                                               
+}"><br><br>
+
+<div id='myDiv125'>...</div><br>
